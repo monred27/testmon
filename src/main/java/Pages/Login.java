@@ -9,11 +9,13 @@ import org.openqa.selenium.WebElement;
  */
 public class Login {
 
-    WebDriver driver = new WebDriver();
+    WebDriver driver;
 
+    public Login(WebDriver driver) {
+        this.driver = driver;
+    }
 
-
-    public void login(WebDriver driver){
+    public void login(){
 
         WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
